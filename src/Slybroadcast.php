@@ -271,6 +271,10 @@ class Slybroadcast
                         $v = explode(':', $value);
                         $arr['errors'][$v[0]] = $v[1];
                     }
+                    elseif(strpos($value,'session_id') !== FALSE){ 
+                        $v = explode('=', $value);
+                        $arr['session_id'] = $v[1];
+                    }
                     else
                     {
                         $arr['message'] = $value;
